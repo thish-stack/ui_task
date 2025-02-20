@@ -5,7 +5,7 @@ A new Flutter project.
 ## Inspiration
 
 The UI was inspired by this design from Dribbble:  
-[![Analytics Dashboard - Mobile View](https://cdn.dribbble.com/users/240426/screenshots/19602795/media/2d1eb03f16e1b927678c93dcb662a22d.png)](https://dribbble.com/shots/19602795-Analytics-Dashboard-Mobile-View)
+[![Analytics Dashboard - Mobile View]](https://dribbble.com/shots/19602795-Analytics-Dashboard-Mobile-View)
 
 ## Home Screen
 
