@@ -10,8 +10,8 @@ The UI was inspired by this design from Dribbble:
 ## Home Screen
 
 <p align="center">
-  <img src="screenshots/ui_task_1.png" width="45%" />
-  <img src="screenshots/ui_task_2.png" width="45%" />
+  <img src="screenshots/ui_task_1.jpg" width="45%" />
+  <img src="screenshots/ui_task_2.jpg" width="45%" />
 </p>
 
 
