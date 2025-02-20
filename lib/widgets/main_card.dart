@@ -39,7 +39,7 @@ class MainCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 23,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w900,
                     color: Colors.black,
                   ),
                 ),
@@ -57,7 +57,7 @@ class MainCard extends StatelessWidget {
             'Total score',
             style: TextStyle(fontSize: 14, color: Colors.black54),
           ),
-          const SizedBox(height: 5),
+          // const SizedBox(height: 5),
 
           Text(
             totalScore,
@@ -81,7 +81,7 @@ class MainCard extends StatelessWidget {
                 Text(
                   amount,
                   style: const TextStyle(
-                    fontSize: 14,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
@@ -90,7 +90,7 @@ class MainCard extends StatelessWidget {
                 Text(
                   productId,
                   style: const TextStyle(
-                    fontSize: 12,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.black54,
                   ),

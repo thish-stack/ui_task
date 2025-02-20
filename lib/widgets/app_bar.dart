@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
+import 'package:solar_icons/solar_icons.dart';
+
+// import 'package:iconify_flutter/icons/solar.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -12,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            icon: const Icon(Icons.more_horiz, size: 28),
+            icon: const Icon(SolarIconsOutline.widget_3, size: 28),
             onPressed: () {},
           ),
           const Text(

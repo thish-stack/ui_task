@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:solar_icons/solar_icons.dart';
 
 class SearchFilterRow extends StatelessWidget {
   const SearchFilterRow({super.key});
@@ -9,21 +10,22 @@ class SearchFilterRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-          icon: const Icon(Icons.search, size: 28),
+          icon: const Icon(SolarIconsOutline.magnifier, size: 28),
           onPressed: () {},
         ),
         Row(
           children: [
             IconButton(
-              icon: const Icon(Icons.more_horiz, size: 28),
+              icon: const Icon(SolarIconsOutline.menuDots, size: 28),
               onPressed: () {},
             ),
             IconButton(
-              icon: const Icon(Icons.calendar_today, size: 28),
+              icon:
+                  const Icon(SolarIconsOutline.calendarMinimalistic, size: 28),
               onPressed: () {},
             ),
             IconButton(
-              icon: const Icon(Icons.folder, size: 28),
+              icon: const Icon(SolarIconsOutline.folderOpen, size: 28),
               onPressed: () {},
             ),
             FloatingActionButton(
@@ -32,7 +34,8 @@ class SearchFilterRow extends StatelessWidget {
               shape: const CircleBorder(),
               mini: true,
               elevation: 0,
-              child: const Icon(Icons.add, color: Colors.black),
+              child: const Icon(SolarIconsOutline.addSquare,
+                  size: 28, color: Colors.black),
             )
           ],
         ),

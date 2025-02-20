@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:solar_icons/solar_icons.dart';
+
 class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({super.key});
 
@@ -14,16 +16,16 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     return BottomNavigationBar(
       backgroundColor: Colors.black,
       unselectedItemColor: Colors.white54,
-      selectedItemColor: Colors.black, 
+      selectedItemColor: Colors.black,
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: false,
       showUnselectedLabels: false,
       items: [
-        _buildNavItem(Icons.dashboard_outlined, 0),
-        _buildNavItem(Icons.archive_outlined, 1),
-        _buildNavItem(Icons.folder_outlined, 2),
-        _buildNavItem(Icons.delete_outline, 3),
-        _buildNavItem(Icons.more_horiz, 4),
+        _buildNavItem(SolarIconsOutline.chartSquare, 0),
+        _buildNavItem(SolarIconsBold.box, 1),
+        _buildNavItem(SolarIconsOutline.inboxLine, 2),
+        _buildNavItem(SolarIconsOutline.cart_4, 3),
+        _buildNavItem(SolarIconsOutline.menuDots, 4),
       ],
       currentIndex: _selectedIndex,
       onTap: (index) {
@@ -46,6 +48,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         ),
         child: Icon(
           icon,
+          size: 28,
           color: isSelected ? Colors.black : Colors.white54,
         ),
       ),

@@ -37,6 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.8  
   lucide_icons_flutter: ^1.2.7
   fl_chart: ^0.70.2
+  iconify_flutter: ^0.0.7
+  iconify_flutter_plus: ^1.0.4
+  solar_icons: ^0.0.5
+  google_fonts: ^6.2.1
  
 
 dev_dependencies:
