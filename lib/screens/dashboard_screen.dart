@@ -35,32 +35,7 @@ class DashboardScreen extends StatelessWidget {
             const SizedBox(height: 30),
 
             // Main Cards Row
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.40,
-              child: ListView(
-                scrollDirection: Axis.horizontal, 
-                children: const [
-                  MainCard(
-                    title: 'Top 5 products by spend',
-                    totalScore: '2,985',
-                    amount: '\$1,815.67',
-                    productId: 'B07MCGRV7M',
-                  ),
-                  MainCard(
-                    title: 'High Performing Items',
-                    totalScore: '4,521',
-                    amount: '\$3,024.89',
-                    productId: 'A12XYZ45',
-                  ),
-                  MainCard(
-                    title: 'Best Selling Category',
-                    totalScore: '7,842',
-                    amount: '\$5,789.10',
-                    productId: 'C98LMN23',
-                  ),
-                ],
-              ),
-            ),
+           const MainCardsSection(),
 
             const SizedBox(height: 20),
 
