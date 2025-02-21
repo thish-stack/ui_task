@@ -38,7 +38,7 @@ class DashboardScreen extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.40,
               child: ListView(
-                scrollDirection: Axis.horizontal, //
+                scrollDirection: Axis.horizontal, 
                 children: const [
                   MainCard(
                     title: 'Top 5 products by spend',
@@ -74,18 +74,25 @@ class DashboardScreen extends StatelessWidget {
                     title: 'Orders Created',
                     dateRange: 'Oct 16 / 21 - Nov 14 / 21',
                     amount: '\$134,970',
+                    subAmount: '\$128,451',
                     change: '+12.98%',
+                    isPositive: true, 
                   ),
                   StatsCard(
                     title: 'Total Sales',
                     dateRange: 'Oct 16 / 21 - Nov 14 / 21',
                     amount: '\$2,145,132.80',
+                    subAmount: '\$128,451',
+                    change: '+12.98%',
+                    isPositive: true,
                   ),
                   StatsCard(
                     title: 'Revenue Growth',
                     dateRange: 'Oct 16 / 21 - Nov 14 / 21',
                     amount: '\$789,312.50',
+                    subAmount: '\$768,450',
                     change: '-8.24%',
+                    isPositive: false, 
                   ),
                 ],
               ),
