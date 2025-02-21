@@ -5,13 +5,13 @@ A new Flutter project.
 ## Inspiration
 
 The UI was inspired by this design from Dribbble:  
-[![Analytics Dashboard - Mobile View]](https://dribbble.com/shots/19602795-Analytics-Dashboard-Mobile-View)
+[[Analytics Dashboard - Mobile View]](https://dribbble.com/shots/19602795-Analytics-Dashboard-Mobile-View)
 
 ## Home Screen
 
 <p align="center">
-  <img src="screenshots/ui_task_1.jpg" width="45%" />
-  <img src="screenshots/ui_task_2.jpg" width="45%" />
+  <img src="screenshots/Screenshot_1.jpg" width="45%" />
+  <img src="screenshots/Screenshot_2.jpg" width="45%" />
 </p>
 
 
