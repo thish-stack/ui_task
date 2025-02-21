@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solar_icons/solar_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({super.key});
@@ -21,11 +21,11 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       items: [
-        _buildNavItem(SolarIconsOutline.chartSquare, 0),
-        _buildNavItem(SolarIconsBold.box, 1),
-        _buildNavItem(SolarIconsOutline.inboxLine, 2),
-        _buildNavItem(SolarIconsOutline.cart_4, 3),
-        _buildNavItem(SolarIconsOutline.menuDots, 4),
+        _buildNavItem('assets/icons/solar--chart-square-outline.svg', 0),
+        _buildNavItem('assets/icons/solar--box-broken.svg', 1),
+        _buildNavItem('assets/icons/solar--inbox-line-outline.svg', 2),
+        _buildNavItem('assets/icons/solar--cart-4-outline.svg', 3),
+        _buildNavItem('assets/icons/solar--menu-dots-outline.svg', 4),
       ],
       currentIndex: _selectedIndex,
       onTap: (index) {
@@ -36,7 +36,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     );
   }
 
-  BottomNavigationBarItem _buildNavItem(IconData icon, int index) {
+  BottomNavigationBarItem _buildNavItem(String svgPath, int index) {
     bool isSelected = _selectedIndex == index;
 
     return BottomNavigationBarItem(
@@ -46,16 +46,21 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           shape: BoxShape.circle,
           color: isSelected ? const Color(0xFFE2D291) : Colors.transparent,
         ),
-        child: Icon(
-          icon,
-          size: 28,
-          color: isSelected ? Colors.black : Colors.white54,
+        child: SvgPicture.asset(
+          svgPath,
+          width: 28,
+          height: 28,
+          colorFilter: ColorFilter.mode(
+            isSelected ? Colors.black : Colors.white54,
+            BlendMode.srcIn,
+          ),
         ),
       ),
       label: '',
     );
   }
 }
+
 
 
 
