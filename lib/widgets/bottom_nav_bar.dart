@@ -21,151 +21,73 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       items: [
-        _buildNavItem('assets/icons/solar--chart-square-outline.svg', 0),
-        _buildNavItem('assets/icons/solar--box-broken.svg', 1),
-        _buildNavItem('assets/icons/solar--inbox-line-outline.svg', 2),
-        _buildNavItem('assets/icons/solar--cart-4-outline.svg', 3),
-        _buildNavItem('assets/icons/solar--menu-dots-outline.svg', 4),
+        BottomNavigationBarItem(
+          icon: NavBarItem(
+            iconPath: 'assets/icons/solar--chart-square-outline.svg',
+            isSelected: _selectedIndex == 0,
+          ),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: NavBarItem(
+            iconPath: 'assets/icons/solar--box-broken.svg',
+            isSelected: _selectedIndex == 1,
+          ),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: NavBarItem(
+            iconPath: 'assets/icons/solar--inbox-line-outline.svg',
+            isSelected: _selectedIndex == 2,
+          ),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: NavBarItem(
+            iconPath: 'assets/icons/solar--cart-4-outline.svg',
+            isSelected: _selectedIndex == 3,
+          ),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: NavBarItem(
+            iconPath: 'assets/icons/solar--menu-dots-outline.svg',
+            isSelected: _selectedIndex == 4,
+          ),
+          label: '',
+        ),
       ],
       currentIndex: _selectedIndex,
-      onTap: (index) {
-        setState(() {
-          _selectedIndex = index;
-        });
-      },
+      onTap: (index) => setState(() => _selectedIndex = index),
     );
   }
+}
 
-  BottomNavigationBarItem _buildNavItem(String svgPath, int index) {
-    bool isSelected = _selectedIndex == index;
+class NavBarItem extends StatelessWidget {
+  final String iconPath;
+  final bool isSelected;
 
-    return BottomNavigationBarItem(
-      icon: Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: isSelected ? const Color(0xFFE2D291) : Colors.transparent,
-        ),
-        child: SvgPicture.asset(
-          svgPath,
-          width: 28,
-          height: 28,
-          colorFilter: ColorFilter.mode(
-            isSelected ? Colors.black : Colors.white54,
-            BlendMode.srcIn,
-          ),
+  const NavBarItem({super.key, required this.iconPath, required this.isSelected});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: isSelected ? const Color(0xFFE2D291) : Colors.transparent,
+      ),
+      child: SvgPicture.asset(
+        iconPath,
+        width: 28,
+        height: 28,
+        colorFilter: ColorFilter.mode(
+          isSelected ? Colors.black : Colors.white54,
+          BlendMode.srcIn,
         ),
       ),
-      label: '',
     );
   }
 }
 
 
-
-
-// class CustomBottomNavBar extends StatefulWidget {
-//   const CustomBottomNavBar({super.key});
-
-//   @override
-//   _CustomBottomNavBarState createState() => _CustomBottomNavBarState();
-// }
-
-// class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
-//   int _selectedIndex = 0;
-
-//   void _onItemTapped(int index) {
-//     setState(() {
-//       _selectedIndex = index;
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return BottomNavigationBar(
-//       backgroundColor: Colors.black,
-//       unselectedItemColor: Colors.white54,
-//       selectedItemColor: Colors.black,
-//       type: BottomNavigationBarType.fixed,
-//       showSelectedLabels: false,
-//       showUnselectedLabels: false,
-//       currentIndex: _selectedIndex,
-//       onTap: _onItemTapped,
-//       items: [
-//         _buildNavItem(Icons.dashboard_outlined, 0),
-//         _buildNavItem(Icons.archive_outlined, 1),
-//         _buildNavItem(Icons.folder_outlined, 2),
-//         _buildNavItem(Icons.delete_outline, 3),
-//         _buildNavItem(Icons.more_horiz, 4),
-//       ],
-//     );
-//   }
-
-//   BottomNavigationBarItem _buildNavItem(IconData icon, int index) {
-//     return BottomNavigationBarItem(
-//       icon: NavIconWidget(icon: icon, isSelected: _selectedIndex == index),
-//       label: '',
-//     );
-//   }
-// }
-
-// class NavIconWidget extends StatelessWidget {
-//   final IconData icon;
-//   final bool isSelected;
-
-//   const NavIconWidget({
-//     super.key,
-//     required this.icon,
-//     required this.isSelected,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: const EdgeInsets.all(10),
-//       decoration: BoxDecoration(
-//         shape: BoxShape.circle,
-//         color: isSelected ? const Color(0xFFE2D291) : Colors.transparent,
-//       ),
-//       child: Icon(
-//         icon,
-//         color: isSelected ? Colors.black : Colors.white54,
-//       ),
-//     );
-//   }
-// }
-
-
-
-//==========================================
-// class NavItem extends StatelessWidget {
-//   final IconData icon;
-//   final int index;
-//   final int selectedIndex;
-
-//   const NavItem({
-//     Key? key,
-//     required this.icon,
-//     required this.index,
-//     required this.selectedIndex,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     bool isSelected = selectedIndex == index;
-//     return BottomNavigationBarItem(
-//       icon: Container(
-//         padding: const EdgeInsets.all(10),
-//         decoration: BoxDecoration(
-//           shape:
-// BoxShape.circle,
-//           color: isSelected ? const Color(0xFFE2D291) : Colors.transparent,
-//         ),
-//         child: Icon(
-//           icon,
-//           color: isSelected ? Colors.black : Colors.white54,
-//         ),
-//       ),
-//     );
-//   }
-// }
