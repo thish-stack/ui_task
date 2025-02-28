@@ -1,29 +1,47 @@
-# UI Task
+# UI Task - Responsive Flutter App
 
-A new Flutter project.
+## Running the App with Multiple Devices Preview  
 
-## Inspiration
+I used the **`device_preview`** package to simulate different screen sizes and devices.  
 
-The UI was inspired by this design from Dribbble:  
-[[Analytics Dashboard - Mobile View]](https://dribbble.com/shots/19602795-Analytics-Dashboard-Mobile-View)
+### **Enable Device Preview**  
+To enable **device preview**, make sure to set it to `true` in your `main.dart`:
 
-## Home Screen
+```dart
 
-<p align="center">
-  <img src="screenshots/Screenshot_1.jpg" width="45%" />
-  <img src="screenshots/Screenshot_2.jpg" width="45%" />
-</p>
+void main() {
+  runApp(
+    DevicePreview(
+      enabled: true, //Set to true to preview multiple devices
+      builder: (context) => const MyApp(),
+    ),
+  );
+}
+```
+
+## How to Run  
+
+### Clone the Repository  
+```sh
+git clone -b responsive https://github.com/thish-stack/ui_task.git
+cd ui_task
+```
+
+### Install Dependencies  
+```sh
+flutter pub get
+flutter pub add device_preview
+```
+
+### Run the App  
+```sh
+flutter run
+```
+
+### Open Device Preview to test responsiveness across different screen sizes.  
+
+## Screen Orientation Settings  
+- **Mobile Devices** → Locked to **portrait** mode.  
+- **Tablets & Larger Screens** → Supports both **portrait & landscape** modes.  
 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the  
-[online documentation](https://docs.flutter.dev/), which offers tutorials,  
-samples, guidance on mobile development, and a full API reference.
