@@ -16,6 +16,9 @@ class MainCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenHeight = MediaQuery.of(context).size.height;
+    final bool isSmallScreen = screenHeight < 670;
+
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,
       margin: const EdgeInsets.symmetric(horizontal: 8),
@@ -28,8 +31,7 @@ class MainCard extends StatelessWidget {
         children: [
           // Title row
           Padding(
-            padding:
-                const EdgeInsets.all(20), 
+            padding: const EdgeInsets.all(20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -70,54 +72,58 @@ class MainCard extends StatelessWidget {
 
           const SizedBox(height: 20),
 
-          
           Expanded(
             child: Stack(
               alignment: Alignment.center,
               children: [
-           
-                Positioned.fill(
-                  child: Opacity(
-                    opacity: 0.5, 
-                    child: Image.asset(
-                      'assets/gauge.png',
-                      fit: BoxFit.cover, 
+                if (!isSmallScreen)
+                  AspectRatio(
+                    aspectRatio: 3 / 1.7,
+                    child: Opacity(
+                      opacity: 0.5,
+                      child: Image.asset(
+                        'assets/gauge.png',
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                      ),
                     ),
                   ),
-                ),
 
-                // Amount and Product ID 
-                Positioned(
-                  bottom: 30, 
-                  child: Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: Colors.white
-                          .withOpacity(0.7),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      children: [
-                        Text(
+                //  Amount & Product ID
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
                           amount,
-                          style: const TextStyle(
-                            fontSize: 18,
+                          style: TextStyle(
+                            fontSize: isSmallScreen ? 14 : 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
                         ),
-                        const SizedBox(height: 2),
-                        Text(
+                      ),
+                      const SizedBox(height: 2),
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
                           productId,
-                          style: const TextStyle(
-                            fontSize: 18,
+                          style: TextStyle(
+                            fontSize: isSmallScreen ? 12 : 16,
                             fontWeight: FontWeight.bold,
                             color: Colors.black54,
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -128,5 +134,3 @@ class MainCard extends StatelessWidget {
     );
   }
 }
-
-
