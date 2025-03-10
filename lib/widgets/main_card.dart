@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class MainCard extends StatelessWidget {
@@ -17,7 +18,7 @@ class MainCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
-    final bool isSmallScreen = screenHeight < 670;
+    final bool isSmallScreen = screenHeight < 640;
 
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,

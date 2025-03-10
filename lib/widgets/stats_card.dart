@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class StatsCard extends StatelessWidget {
@@ -22,7 +21,7 @@ class StatsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 230,
+     
       margin: const EdgeInsets.symmetric(horizontal: 8),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -35,21 +34,16 @@ class StatsCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+              Text(title,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
               const Icon(Icons.more_horiz_outlined,
                   color: Colors.white, size: 20),
             ],
           ),
-
           const SizedBox(height: 5),
-
-         
           Text(dateRange,
               style: const TextStyle(fontSize: 12, color: Colors.grey)),
-
           const SizedBox(height: 10),
-
-        
           Text(
             amount,
             style: TextStyle(
@@ -58,20 +52,17 @@ class StatsCard extends StatelessWidget {
               color: isPositive ? Colors.green : Colors.red,
             ),
           ),
-
           const Spacer(),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-             
               Text(
                 subAmount,
                 style: const TextStyle(fontSize: 14, color: Colors.grey),
               ),
-
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
                   color: isPositive ? Colors.green[600] : Colors.red[600],
                   borderRadius: BorderRadius.circular(8),
@@ -89,4 +80,3 @@ class StatsCard extends StatelessWidget {
     );
   }
 }
-

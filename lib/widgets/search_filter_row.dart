@@ -9,35 +9,48 @@ class SearchFilterRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        // Left Icon (Search) - Takes up minimal space
         IconButton(
-          icon: const Icon(SolarIconsOutline.magnifier, size: 28),
+          icon: const Icon(SolarIconsOutline.magnifier),
           onPressed: () {},
         ),
-        Row(
-          children: [
-            IconButton(
-              icon: const Icon(SolarIconsOutline.menuDots, size: 28),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon:
-                  const Icon(SolarIconsOutline.calendarMinimalistic, size: 28),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: const Icon(SolarIconsOutline.folderOpen, size: 28),
-              onPressed: () {},
-            ),
-            FloatingActionButton(
-              onPressed: () {},
-              backgroundColor: const Color(0xFFE2D291),
-              shape: const CircleBorder(),
-              mini: true,
-              elevation: 0,
-              child: const Icon(SolarIconsOutline.addSquare,
-                  size: 28, color: Colors.black),
-            )
-          ],
+
+        // Right Icons - Shrink proportionally
+        Flexible(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Flexible(
+                child: IconButton(
+                  icon: const Icon(SolarIconsOutline.menuDots),
+                  onPressed: () {},
+                ),
+              ),
+              Flexible(
+                child: IconButton(
+                  icon: const Icon(SolarIconsOutline.calendarMinimalistic),
+                  onPressed: () {},
+                ),
+              ),
+              Flexible(
+                child: IconButton(
+                  icon: const Icon(SolarIconsOutline.folderOpen),
+                  onPressed: () {},
+                ),
+              ),
+              Flexible(
+                child: FloatingActionButton(
+                  onPressed: () {},
+                  backgroundColor: const Color(0xFFE2D291),
+                  shape: const CircleBorder(),
+                  mini: true,
+                  elevation: 0,
+                  child: const Icon(SolarIconsOutline.addSquare,
+                      color: Colors.black),
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );

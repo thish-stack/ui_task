@@ -18,9 +18,15 @@ class CustomAppBar extends StatelessWidget {
             icon: const Icon(SolarIconsOutline.widget_3, size: 28),
             onPressed: () {},
           ),
-          const Text(
-            'Dashboard',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          const Expanded(
+            child: Center(
+              child: Text(
+                'Dashboard',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
           Stack(
             clipBehavior: Clip.none,
