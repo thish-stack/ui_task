@@ -22,10 +22,10 @@ void main() {
 ## Screenshots
 
 ### Mobile View
-![Mobile Preview](assets/screenshots/ui_task_mob1.png)
+![Mobile Preview](screenshots/ui_task_mob1.png)
 
 ### Tablet View 
-<img src="assets/screenshots/ui_task_tab1.png" width="45%"> <img src="assets/screenshots/ui_task_tab2.png" width="45%">
+<img src="screenshots/ui_task_tab1.png" width="45%"> <img src="screenshots/ui_task_tab2.png" width="45%">
 
 ## How to Run  
 
