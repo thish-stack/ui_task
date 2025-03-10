@@ -22,7 +22,9 @@ void main() {
 ## Screenshots
 
 ### Mobile View
+<p align="center">
 <img src="screenshots/ui_task_mob1" width="30%">
+</p>
 
 ### Tablet View 
 <p align="center">
