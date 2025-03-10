@@ -25,7 +25,9 @@ void main() {
 <img src="screenshots/ui_task_mob1" width="30%">
 
 ### Tablet View 
+<p align="center">
 <img src="screenshots/ui_task_tab1.png" width="40%"> <img src="screenshots/ui_task_tab2.png" width="40%">
+</p>
 
 ## How to Run  
 
