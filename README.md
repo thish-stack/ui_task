@@ -19,6 +19,14 @@ void main() {
 }
 ```
 
+## Screenshots
+
+### Mobile View
+![Mobile Preview](assets/screenshots/ui_task_mob1.png)
+
+### Tablet View 
+<img src="assets/screenshots/ui_task_tab1.png" width="45%"> <img src="assets/screenshots/ui_task_tab2.png" width="45%">
+
 ## How to Run  
 
 ### Clone the Repository  
@@ -41,7 +49,7 @@ flutter run
 ### Open Device Preview to test responsiveness across different screen sizes.  
 
 ## Screen Orientation Settings  
-- **Mobile Devices** → Locked to **portrait** mode.  
+- **Mobile Devices** →  Supports both **portrait & landscape** modes. 
 - **Tablets & Larger Screens** → Supports both **portrait & landscape** modes.  
 
 
