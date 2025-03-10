@@ -9,13 +9,13 @@ class SearchFilterRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        // Left Icon (Search) - Takes up minimal space
+      
         IconButton(
           icon: const Icon(SolarIconsOutline.magnifier),
           onPressed: () {},
         ),
 
-        // Right Icons - Shrink proportionally
+        
         Flexible(
           child: Row(
             mainAxisSize: MainAxisSize.min,

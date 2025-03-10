@@ -14,7 +14,7 @@ class _CustomNavRailState extends State<CustomNavRail> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black, // Background color to match bottom nav bar
+      color: Colors.black,
       child: NavigationRail(
         backgroundColor: Colors.black,
         selectedIndex: _selectedIndex,
@@ -23,10 +23,10 @@ class _CustomNavRailState extends State<CustomNavRail> {
             _selectedIndex = index;
           });
         },
-        indicatorShape: const CircleBorder(), // Makes it circular
-        indicatorColor: Colors.transparent, // Customize color
-        useIndicator: true, // Ensure indicator is enabled
-        labelType: NavigationRailLabelType.none, // Hide labels
+        indicatorShape: const CircleBorder(), 
+        indicatorColor: Colors.transparent, 
+        useIndicator: true, 
+        labelType: NavigationRailLabelType.none, 
         destinations: List.generate(5, (index) => _buildNavItem(index)),
       ),
     );
