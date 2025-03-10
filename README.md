@@ -23,7 +23,7 @@ void main() {
 
 ### Mobile View
 <p align="center">
-<img src="screenshots/ui_task_mob1" >
+<img src="screenshots/ui_task_mob1.png" >
 </p>
 
 ### Tablet View 
